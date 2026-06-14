@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — paparogames</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0D1F0D; --bg2:#0a180a; --phos:#7FFF7F; --snake:#33CC33;
+  --apple:#CC2222; --amber:#E8B040; --dim:#5a8a5a; --line:rgba(127,255,127,0.18);
+}
+html,body{background:var(--bg);color:#dfeede;font-family:'DM Mono',ui-monospace,Menlo,Consolas,monospace;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden}
+#bg{position:fixed;inset:0;width:100vw;height:100vh;z-index:0;display:block;pointer-events:none;opacity:0.55}
+.wrap{position:relative;z-index:1;max-width:920px;margin:0 auto;padding:0 22px}
+.pixel{font-family:'Press Start 2P',monospace;line-height:1.5}
+.scan{position:fixed;inset:0;z-index:2;pointer-events:none;
+  background:repeating-linear-gradient(to bottom, rgba(0,0,0,0) 0 3px, rgba(0,0,0,0.06) 3px 4px)}
+
+/* hero */
+header{min-height:92vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:60px 0 40px}
+.icon{width:128px;height:128px;border-radius:26px;image-rendering:pixelated;
+  box-shadow:0 0 0 3px rgba(127,255,127,0.25), 0 8px 40px rgba(0,0,0,0.6);margin-bottom:30px}
+h1.title{font-size:clamp(20px,5.2vw,40px);color:var(--phos);letter-spacing:1px;
+  text-shadow:0 0 18px rgba(127,255,127,0.45);margin-bottom:22px}
+.tag{font-size:clamp(13px,2.4vw,17px);color:#bfe9bf;max-width:560px;margin:0 auto 14px;line-height:1.7}
+.tag .hl{color:var(--apple);font-weight:600}
+.tag .hl2{color:var(--phos)}
+.kick{font-family:'Press Start 2P',monospace;font-size:clamp(9px,2vw,12px);color:var(--amber);margin-bottom:36px;letter-spacing:.5px}
+.cta{display:inline-flex;align-items:center;gap:12px;background:var(--phos);color:#06150a;
+  font-family:'Press Start 2P',monospace;font-size:13px;text-decoration:none;padding:18px 26px;border-radius:12px;
+  box-shadow:0 0 24px rgba(127,255,127,0.35);transition:transform .12s ease, box-shadow .12s ease}
+.cta:hover{transform:translateY(-2px);box-shadow:0 0 36px rgba(127,255,127,0.55)}
+.cta svg{width:20px;height:20px}
+.scrollhint{margin-top:46px;color:var(--dim);font-size:11px;letter-spacing:2px;animation:bob 2.2s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0);opacity:.6}50%{transform:translateY(6px);opacity:1}}
+
+/* section base */
+section{padding:64px 0;border-top:1px solid var(--line)}
+.eyebrow{font-family:'Press Start 2P',monospace;font-size:10px;color:var(--snake);letter-spacing:1px;margin-bottom:16px}
+h2{font-family:'Press Start 2P',monospace;font-size:clamp(15px,3.4vw,22px);color:var(--phos);line-height:1.6;margin-bottom:18px}
+p.lead{font-size:15px;line-height:1.85;color:#cfe6cf;max-width:640px}
+p.lead .still{color:var(--phos);font-weight:600}
+p.lead .move{color:var(--apple);font-weight:600}
+
+/* shots */
+.shots{display:flex;gap:18px;overflow-x:auto;padding:8px 0 18px;scroll-snap-type:x mandatory}
+.shots img{height:430px;width:auto;border-radius:14px;image-rendering:pixelated;scroll-snap-align:center;
+  border:1px solid var(--line);box-shadow:0 8px 30px rgba(0,0,0,0.5);background:var(--bg2)}
+.shots::-webkit-scrollbar{height:8px}
+.shots::-webkit-scrollbar-thumb{background:rgba(127,255,127,0.25);border-radius:8px}
+
+/* features */
+.feat{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:8px}
+.card{background:rgba(10,24,10,0.7);border:1px solid var(--line);border-radius:12px;padding:20px}
+.card .ico{font-size:22px;margin-bottom:10px}
+.card h3{font-family:'Press Start 2P',monospace;font-size:11px;color:var(--phos);margin-bottom:10px;line-height:1.5}
+.card p{font-size:13.5px;line-height:1.7;color:#bcd6bc}
+
+/* badges row */
+.badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.badge{font-family:'Press Start 2P',monospace;font-size:9px;color:var(--dim);
+  border:1px solid var(--line);border-radius:20px;padding:9px 14px}
+
+footer{border-top:1px solid var(--line);padding:40px 0 70px;text-align:center;color:var(--dim);font-size:12px;line-height:2}
+footer a{color:var(--snake);text-decoration:none}
+footer a:hover{color:var(--phos)}
+.center{text-align:center}
+.mt{margin-top:34px}
+
+/* alpha badge */
+.alphabadge{display:inline-flex;align-items:center;gap:8px;font-family:'Press Start 2P',monospace;
+  font-size:9px;color:var(--amber);border:1px solid rgba(232,176,64,0.5);border-radius:20px;
+  padding:8px 14px;margin-bottom:26px;letter-spacing:1px}
+.alphabadge .blink{width:8px;height:8px;border-radius:50%;background:var(--amber);
+  box-shadow:0 0 8px var(--amber);animation:blink 1.4s ease-in-out infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+
+/* modal */
+.modal{position:fixed;inset:0;z-index:50;display:none;align-items:center;justify-content:center;
+  background:rgba(3,10,3,0.82);padding:22px;backdrop-filter:blur(3px)}
+.modal.open{display:flex}
+.modalbox{background:var(--bg2);border:2px solid var(--phos);border-radius:16px;max-width:460px;width:100%;
+  padding:30px 26px;box-shadow:0 0 40px rgba(127,255,127,0.25);position:relative;max-height:90vh;overflow-y:auto}
+.modalbox h3{font-family:'Press Start 2P',monospace;font-size:14px;color:var(--phos);line-height:1.6;margin-bottom:8px}
+.modalbox .sub{font-size:13px;color:#bcd6bc;line-height:1.7;margin-bottom:24px}
+.modal .close{position:absolute;top:14px;right:16px;background:none;border:none;color:var(--dim);
+  font-size:22px;cursor:pointer;line-height:1;font-family:'DM Mono',monospace}
+.modal .close:hover{color:var(--phos)}
+.steps{counter-reset:s;list-style:none}
+.steps li{counter-increment:s;position:relative;padding-left:42px;margin-bottom:18px}
+.steps li::before{content:counter(s);position:absolute;left:0;top:0;width:28px;height:28px;border-radius:8px;
+  background:rgba(127,255,127,0.12);border:1px solid var(--line);color:var(--phos);
+  font-family:'Press Start 2P',monospace;font-size:10px;display:flex;align-items:center;justify-content:center}
+.steps .st{font-size:13.5px;color:#dfeede;line-height:1.6;margin-bottom:7px}
+.steplink{display:inline-block;font-size:12.5px;color:var(--snake);text-decoration:none;word-break:break-all;
+  border-bottom:1px solid rgba(51,204,51,0.4)}
+.steplink:hover{color:var(--phos)}
+.modalnote{font-size:12px;color:var(--dim);line-height:1.7;margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+
+.doc{max-width:720px;margin:0 auto;padding:70px 0}
+.doc h1{font-family:'Press Start 2P',monospace;font-size:clamp(15px,3.6vw,22px);color:var(--phos);margin-bottom:10px;line-height:1.6}
+.doc .date{color:var(--dim);font-size:12px;margin-bottom:34px}
+.doc h2{font-family:'Press Start 2P',monospace;font-size:13px;color:var(--snake);margin:34px 0 12px;line-height:1.6}
+.doc p, .doc li{font-size:14.5px;line-height:1.85;color:#cfe6cf}
+.doc ul{padding-left:22px;margin:8px 0}
+.doc li{margin-bottom:6px}
+.doc a{color:var(--snake)}
+.back{display:inline-block;font-family:'Press Start 2P',monospace;font-size:9px;color:var(--snake);text-decoration:none;margin-bottom:30px}
+</style>
+</head>
+<body>
+<canvas id="bg"></canvas>
+<div class="scan"></div>
+<div class="wrap">
+  <div class="doc">
+    <a class="back" href="inchworm.html">← BACK</a>
+    <h1>Privacy Policy</h1>
+    <div class="date">Last updated: June 2026</div>
+
+    <p>This Privacy Policy explains how <strong>paparogames</strong> ("we") handles information in the game <strong>Inchworm, Stay Still</strong> ("the game"). We keep this short because the game collects very little.</p>
+
+    <h2>What the game stores</h2>
+    <p>Your game progress — coins, unlocked skins, best level and score — is stored <strong>only on your own device</strong>. It is never uploaded to us and never leaves your phone unless you back it up yourself through your device or Google account.</p>
+
+    <h2>Analytics</h2>
+    <p>The game uses Google Firebase Analytics to understand, in aggregate, how the game is played (for example, how often a level is completed). This helps us balance and improve the game. This data is anonymous and not used to identify you personally. Firebase is provided by Google; see Google's privacy policy at <a href="https://policies.google.com/privacy">policies.google.com/privacy</a>.</p>
+
+    <h2>What we do NOT do</h2>
+    <ul>
+      <li>No ads.</li>
+      <li>No in-app purchases.</li>
+      <li>No account or sign-in required.</li>
+      <li>We do not sell or share your personal data.</li>
+      <li>We do not knowingly collect data from children in violation of applicable law.</li>
+    </ul>
+
+    <h2>Permissions</h2>
+    <p>The game may request vibration access to provide haptic feedback. It does not require access to your contacts, location, camera, or files.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy? Reach us at <a href="mailto:paparogames@gmail.com">paparogames@gmail.com</a>.</p>
+
+    <a class="back" href="inchworm.html" style="margin-top:40px">← BACK</a>
+  </div>
+</div>
+<script>
+(function(){
+  const cv = document.getElementById('bg');
+  if(!cv) return;
+  const ctx = cv.getContext('2d');
+  let CELL=22, COLS=0, ROWS=0, W=0, H=0, DPR=1;
+  function resize(){
+    DPR = Math.min(window.devicePixelRatio||1, 2);
+    W = cv.clientWidth; H = cv.clientHeight;
+    cv.width = W*DPR; cv.height = H*DPR;
+    ctx.setTransform(DPR,0,0,DPR,0,0);
+    CELL = Math.max(16, Math.round(Math.min(W,H)/26));
+    COLS = Math.ceil(W/CELL)+2; ROWS = Math.ceil(H/CELL)+2;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // Snake: list of {x,y} grid cells, head first
+  let dir = {x:1,y:0};
+  let snake = [];
+  let len = 9;
+  (function seed(){ let x=Math.floor(COLS/2), y=Math.floor(ROWS/2); for(let i=0;i<len;i++) snake.push({x:x-i,y:y}); })();
+  let turnCooldown = 0;
+
+  // Apples: {x,y,born,life}
+  let apples = [];
+  function spawnApple(){
+    const x = 1+Math.floor(Math.random()*(COLS-2));
+    const y = 1+Math.floor(Math.random()*(ROWS-2));
+    apples.push({x,y,born:performance.now(),life:3500+Math.random()*3500});
+  }
+  for(let i=0;i<3;i++) spawnApple();
+
+  let last = 0, acc = 0, stepMs = 150;
+  const reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  function step(){
+    // steer gently toward nearest apple sometimes, else wander
+    turnCooldown--;
+    if(turnCooldown<=0){
+      let target=null, bestD=1e9;
+      const head=snake[0];
+      for(const ap of apples){
+        const dx=Math.min(Math.abs(ap.x-head.x),COLS-Math.abs(ap.x-head.x));
+        const dy=Math.min(Math.abs(ap.y-head.y),ROWS-Math.abs(ap.y-head.y));
+        const d=dx+dy; if(d<bestD){bestD=d; target=ap;}
+      }
+      let options=[{x:1,y:0},{x:-1,y:0},{x:0,y:1},{x:0,y:-1}].filter(o=>!(o.x===-dir.x&&o.y===-dir.y));
+      if(target && Math.random()<0.8){
+        options.sort((o1,o2)=>{
+          const n1={x:(head.x+o1.x+COLS)%COLS,y:(head.y+o1.y+ROWS)%ROWS};
+          const n2={x:(head.x+o2.x+COLS)%COLS,y:(head.y+o2.y+ROWS)%ROWS};
+          const d1=Math.abs(n1.x-target.x)+Math.abs(n1.y-target.y);
+          const d2=Math.abs(n2.x-target.x)+Math.abs(n2.y-target.y);
+          return d1-d2;
+        });
+        dir = options[0];
+      } else {
+        dir = options[Math.floor(Math.random()*options.length)];
+      }
+      turnCooldown = 2+Math.floor(Math.random()*4);
+    }
+    const head=snake[0];
+    const nh={x:(head.x+dir.x+COLS)%COLS, y:(head.y+dir.y+ROWS)%ROWS};
+    snake.unshift(nh);
+    // eat
+    let ate=false;
+    for(let i=apples.length-1;i>=0;i--){
+      if(apples[i].x===nh.x && apples[i].y===nh.y){ apples.splice(i,1); ate=true; len++; spawnApple(); }
+    }
+    if(!ate) snake.pop();
+    while(snake.length>len) snake.pop();
+  }
+
+  function draw(now){
+    // expire apples
+    apples = apples.filter(ap=> now-ap.born < ap.life);
+    if(apples.length<3 && Math.random()<0.04) spawnApple();
+
+    ctx.clearRect(0,0,W,H);
+    // faint dot grid
+    ctx.fillStyle='rgba(127,255,127,0.035)';
+    for(let gx=0;gx<COLS;gx++) for(let gy=0;gy<ROWS;gy++){
+      ctx.fillRect(gx*CELL+CELL/2-1, gy*CELL+CELL/2-1, 2,2);
+    }
+    const inset = Math.round(CELL*0.12);
+    const sz = CELL - inset*2;
+    // apples (with fade in/out)
+    for(const ap of apples){
+      const age = now-ap.born, t = age/ap.life;
+      let alpha = 1;
+      if(t<0.12) alpha = t/0.12;
+      else if(t>0.78) alpha = Math.max(0,(1-t)/0.22);
+      ctx.globalAlpha = 0.85*alpha;
+      const px=ap.x*CELL+inset, py=ap.y*CELL+inset;
+      ctx.fillStyle='#cc2222'; ctx.fillRect(px,py,sz,sz);
+      ctx.fillStyle='#ff5555'; ctx.fillRect(px+inset, py+inset, Math.max(2,sz*0.22), Math.max(2,sz*0.22));
+      ctx.fillStyle='#3a7a2a'; ctx.fillRect(px+sz*0.55, py-inset*1.2, Math.max(2,sz*0.2), Math.max(2,inset*1.3));
+      ctx.globalAlpha=1;
+    }
+    // snake
+    for(let i=snake.length-1;i>=0;i--){
+      const s=snake[i];
+      const px=s.x*CELL+inset, py=s.y*CELL+inset;
+      ctx.fillStyle = i===0 ? '#5aff5a' : '#2f8a22';
+      ctx.globalAlpha = 0.32 + 0.45*(1 - i/Math.max(1,snake.length));
+      ctx.fillRect(px,py,sz,sz);
+      if(i===0){
+        ctx.globalAlpha=0.9; ctx.fillStyle='#0D1F0D';
+        const e=Math.max(2,Math.round(sz*0.16));
+        if(dir.x!==0){ ctx.fillRect(px+sz*0.55, py+sz*0.22, e,e); ctx.fillRect(px+sz*0.55, py+sz*0.62, e,e); }
+        else { ctx.fillRect(px+sz*0.22, py+sz*0.55, e,e); ctx.fillRect(px+sz*0.62, py+sz*0.55, e,e); }
+      }
+      ctx.globalAlpha=1;
+    }
+  }
+
+  function loop(now){
+    if(!last) last=now;
+    const dt=now-last; last=now;
+    if(!reduce){ acc+=dt; while(acc>=stepMs){ step(); acc-=stepMs; } }
+    draw(now);
+    requestAnimationFrame(loop);
+  }
+  // re-seed snake if grid changed a lot
+  window.addEventListener('resize', ()=>{ if(snake.some(s=>s.x>=COLS||s.y>=ROWS)){ snake=snake.map(s=>({x:s.x%COLS,y:s.y%ROWS})); } });
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>
